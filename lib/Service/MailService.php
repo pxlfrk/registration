@@ -110,9 +110,17 @@ class MailService {
 		
 		// if the parameter is set through the settings panel add to body text
 		$email_verification_hint = $this->config->getAppValue('registration', 'email_verification_hint');
+<<<<<<< HEAD
 		if (!empty($email_verification_hint)) {
 			$template->addBodyText($email_verification_hint);
 		};
+=======
+ 		if (($email_verification_hint === '') || ($email_verification_hint === null)) {
+			// do nothing if the parameter isn't set
+			} else {
+				$template->addBodyText($email_verification_hint);
+		}; 
+>>>>>>> f4462d6... ✨ add user instructions and regex option
 
 		$template->addBodyText(
 			$this->l10n->t('Verification code: %s', $registration->getToken())

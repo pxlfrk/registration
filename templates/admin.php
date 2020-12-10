@@ -59,6 +59,7 @@ foreach ($_['groups'] as $group) {
 		<label for="email_is_login"><?php p($l->t('Force email as login name')); ?></label>
 	</p>
 
+<<<<<<< HEAD
 	<h3><?php p($l->t('Username policy')); ?></h3>
 	<p>
 		<label>
@@ -69,6 +70,17 @@ foreach ($_['groups'] as $group) {
 
 	<h3><?php p($l->t('User instructions')); ?></h3>
 	<em><?php p($l->t('Caution: The user instructions will not be translated and will therefore be displayed as configured below for all users regardless of their actual language.'));?></em>
+=======
+	<h3><?php p($l->t('Username Policy')); ?></h3>
+	<p>
+		<label>
+			<input type="text" id="username_policy_regex" name="username_policy_regex" value="<?php p($_['username_policy_regex']);?>" placeholder="/^[a-z-]+\.[a-z-]+$/">
+		</label>
+	</p>
+	<em><?php p($l->t('If configured usernames will be validated through the regular expression. If the validation fails the user is prompted with a generic error. Make sure your regex is working correctly.'));?></em>
+
+	<h3><?php p($l->t('User Instructions')); ?></h3>
+>>>>>>> f4462d6... ✨ add user instructions and regex option
 	<p>
 		<label>
 			<input type="text" id="additional_hint" name="additional_hint" value="<?php p($_['additional_hint']);?>" placeholder="Please create your username following the scheme 'firstname.lastname'.">
