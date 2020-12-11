@@ -88,17 +88,12 @@ class SettingsController extends Controller {
 			$this->config->deleteAppValue($this->appName, 'username_policy_regex');
 		} elseif ((@preg_match($username_policy_regex, null) === false)) {
 			// validate regex
-<<<<<<< HEAD
 			return new DataResponse([
 				'data' => [
 					'message' => $this->l10n->t('Invalid username policy regex'),
 				],
 				'status' => 'error',
 			], Http::STATUS_BAD_REQUEST);
-=======
-			// TODO: Create SettingsException Class, throw it & show it to user
-			
->>>>>>> f4462d6... ✨ add user instructions and regex option
 		} else {
 			$this->config->setAppValue($this->appName, 'username_policy_regex', $username_policy_regex);
 		}
