@@ -79,8 +79,12 @@ foreach ($_['groups'] as $group) {
 	</p>
 	<em><?php p($l->t('If configured usernames will be validated through the regular expression. If the validation fails the user is prompted with a generic error. Make sure your regex is working correctly.'));?></em>
 
+<<<<<<< HEAD
 	<h3><?php p($l->t('User Instructions')); ?></h3>
 >>>>>>> f4462d6... ✨ add user instructions and regex option
+=======
+	<h3><?php p($l->t('User instructions')); ?></h3>
+>>>>>>> d0ea6ea... Update templates/admin.php
 	<p>
 		<label>
 			<input type="text" id="additional_hint" name="additional_hint" value="<?php p($_['additional_hint']);?>" placeholder="Please create your username following the scheme 'firstname.lastname'.">
